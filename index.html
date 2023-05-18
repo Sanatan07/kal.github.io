@@ -41,16 +41,16 @@
 
 
             // documnets link
-            AFRAME.registerComponent('documentspoint-handler', {
+            AFRAME.registerComponent('webpoint-handler', {
             
             init: function() {
                 //console.log("I was triggered");
                 const marker1 = document.querySelector("#marker1");
-                const imgDocuments = document.querySelector("#img-documents");
+                const imgWeb = document.querySelector("#img-web");
                 
                 marker1.addEventListener('click', function(ev, target) {
                     const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-                if (imgDocuments && intersectedElement === imgDocuments) {
+                if (imgDocuments && intersectedElement === imgWeb) {
                     console.log("Clicked");
                     document.location.href = "https://rohinidevkar.github.io/docs.github.io/";
                 }
@@ -120,10 +120,10 @@
                     <source  src="videos/introduction.mp4">
                 </video>
 
-                <!-- Documents Image -->
+                <!-- Web Image -->
                 
 
-                <img id="documents-point" src="images/documents-cover.jpg">
+                <img id="web-point" src="images/web-cover.jpg">
 
                 <!-- github point Image -->
 
@@ -168,11 +168,11 @@
                 <a-plane id="img-map" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#map-point'></a-plane>
                 <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
             </a-marker>   
-            <!-- documents Marker -->
+            <!-- web Marker -->
 
-            <a-marker id="marker4" type='pattern' url='markers/documents-pattern-marker.patt' emitevents="true" cursor="rayOrigin: mouse" documentspoint-handler>
+            <a-marker id="marker4" type='pattern' url='markers/web-pattern-marker.patt' emitevents="true" cursor="rayOrigin: mouse" webpoint-handler>
                 <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
-                <a-plane id="img-documents" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#documents-point'></a-plane>
+                <a-plane id="img-web" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#web-point'></a-plane>
                 <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
             </a-marker>   
             
